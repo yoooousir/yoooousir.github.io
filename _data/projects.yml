@@ -13,21 +13,19 @@
 #     - tag: AngularJS
 #     - tag: Node
 
-- name: project X
-  descr: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"
-  demo: https://example.com/
-  tags:
-    - tag: MongoDB
-    - tag: Express
-    - tag: AngularJS
-    - tag: Node
-
-- name: project Y
-  descr: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"
-  demo: https://example.com/
+- name: BITTOK
+  descr: "It is a Weather Chatbot that can recommand what to wear and eat based on the user's current place and weather. It was developed based on RAG structure, using GPT-4o api key and customized database I built by python crawling and NLP-preprocessed, connected to GCP database."
+  demo: https://github.com/hyeblee/weather_nuri/tree/data
   tags:
     - tag: Python
-    - tag: Django
+    - tag: Spring
+    - tag: Flutter
+    - tag: Kotlin
+    - tag: Postman
 
-- name: project Z
-  descr: "You can also set a project without demo link and no tags"
+- name: Graphically Summarization the Research Article
+  descr: "This module can show the mindmap graphically of the PDF article that user uploaded, so that can recognize the summarization of it in a glance."
+  demo: https://github.com/yoooousir/OSSW24_Team6_Assignment2
+  tags:
+    - tag: Python
+    - tag: React

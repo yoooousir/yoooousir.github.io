@@ -5,29 +5,17 @@
 # - name: Framework
 #   weight: 5
 
-- name: Angular
+- name: RAG
   weight: 5
 
-- name: AngularJS
-  weight: 3
+- name: matlab
+  weight: 5
 
-- name: React
+- name: VR
   weight: 4
 
-- name: Node
-  weight: 1
+- name: AR
+  weight: 4
 
-- name: Flutter
-  weight: 2
-
-- name: Express
-  weight: 3
-
-- name: Django
-  weight: 1
-
-- name: Spring
-  weight: 2
-
-- name: Rails
+- name: Azure
   weight: 4
