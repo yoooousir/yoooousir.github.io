@@ -7,8 +7,8 @@ title: PinkMonster
 description: Personal website powered by Jekyll
 # baseurl: The subpath of your site
 # > set this to "", if you renamed the repository to <user>.github.io
-#url: "https://www.pinkmonster.com"
-baseurl: "/pinkmonster" #
+url: "https://yoooousir.github.io"
+baseurl: "" #
 
 # LANDING PAGE
 # username: This will displayed on the landing page as your name.
