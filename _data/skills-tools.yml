@@ -5,14 +5,29 @@
 # - name: Git
 #   weight: 5
 
+- name: VR
+  weight: 3
+
+- name: AR
+  weight: 2
+
+- name: Azure
+  weight: 3
+
+- name: Postman
+  weight: 3
+
+- name: Unity
+  weight: 3
+
+- name: VSCode
+  weight: 4
+
+- name: PostgreSQL
+  weight: 4
+
 - name: Git
-  weight: 5
-
-- name: Bash
-  weight: 3
-
-- name: Scrum
-  weight: 3
+  weight: 4
 
 - name: Chrome DevTools
   weight: 2
