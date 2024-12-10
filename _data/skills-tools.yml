@@ -16,9 +16,3 @@
 
 - name: Chrome DevTools
   weight: 2
-
-- name: VS Code
-  weight: 3
-
-- name: Postman
-  weight: 4
