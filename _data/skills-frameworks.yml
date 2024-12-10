@@ -8,14 +8,26 @@
 - name: RAG
   weight: 5
 
-- name: matlab
+- name: Flutter
+  weight: 3
+
+- name: Scrum
+  weight: 3
+
+- name: TensorFlow
   weight: 5
 
-- name: VR
+- name: Pytorch
+  weight: 5
+
+- name: LangChain
   weight: 4
 
-- name: AR
-  weight: 4
+- name: Apache Airflow
+  weight: 3
 
-- name: Azure
-  weight: 4
+- name: Spark
+  weight: 1
+
+- name: dbt
+  weight: 2
