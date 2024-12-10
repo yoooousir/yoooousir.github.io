@@ -9,25 +9,25 @@
   weight: 5
 
 - name: C
-  weight: 4
-
-- name: Postman
-  weight: 2
-
-- name: Flutter
-  weight: 2
-
-- name: Unity
-  weight: 3
+  weight: 5
 
 - name: C#
-  weight: 2
+  weight: 3
 
 - name: Ruby
-  weight: 4
+  weight: 3
 
-- name: VS Code
-  weight: 4
+- name: JavaScript
+  weight: 2
+
+- name: Java
+  weight: 2
+
+- name: Kotlin
+  weight: 3
+
+- name: C++
+  weight: 3
 
 - name: PostgreSQL
   weight: 5
@@ -46,3 +46,9 @@
 
 - name: R
   weight: 5
+
+- name: Bash
+  weight: 3
+
+- name: Matlab
+  weight: 3
