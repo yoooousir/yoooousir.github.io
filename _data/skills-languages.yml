@@ -34,18 +34,6 @@
 
 - name: JavaScript
   weight: 4
-
-- name: Java
-  weight: 3
-
-- name: Kotlin
-  weight: 3
   
 - name: R
   weight: 5
-
-- name: Bash
-  weight: 3
-
-- name: Matlab
-  weight: 3
