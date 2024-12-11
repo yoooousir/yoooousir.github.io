@@ -17,7 +17,7 @@
 - name: TensorFlow
   weight: 5
 
-- name: Pytorch
+- name: PyTorch
   weight: 5
 
 - name: LangChain
