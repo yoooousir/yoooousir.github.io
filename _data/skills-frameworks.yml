@@ -12,16 +12,16 @@
   weight: 3
 
 - name: TensorFlow
-  weight: 5
-
-- name: PyTorch
-  weight: 5
-
-- name: LangChain
   weight: 4
 
+- name: PyTorch
+  weight: 4
+
+- name: LangChain
+  weight: 5
+
 - name: Apache Airflow
-  weight: 2
+  weight: 1
 
 - name: Spark
   weight: 1
