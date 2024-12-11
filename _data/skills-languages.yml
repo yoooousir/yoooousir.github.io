@@ -15,7 +15,7 @@
   weight: 3
 
 - name: Ruby
-  weight: 3
+  weight: 2
 
 - name: JavaScript
   weight: 2
@@ -30,7 +30,7 @@
   weight: 3
 
 - name: PostgreSQL
-  weight: 5
+  weight: 4
   
 - name: R
   weight: 5
