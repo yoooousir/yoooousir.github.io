@@ -31,9 +31,6 @@
 
 - name: PostgreSQL
   weight: 5
-
-- name: JavaScript
-  weight: 4
   
 - name: R
   weight: 5
