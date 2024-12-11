@@ -28,6 +28,3 @@
 
 - name: Spark
   weight: 1
-
-- name: dbt
-  weight: 2
