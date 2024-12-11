@@ -28,9 +28,6 @@
 
 - name: C++
   weight: 3
-
-- name: PostgreSQL
-  weight: 4
   
 - name: R
   weight: 5
