@@ -7,12 +7,12 @@ This blog, PinkMonster, is a space where I document curriculum vitae and share m
 ---
 
 ## About Me  
-👩‍💻 **Current Role**: Bachelor’s research student with a focus on AI and machine learning.  
+👩‍💻 **Current Role**: Bachelor student with a focus on AI and machine learning.  
 🧠 **Interests**: NLP, RAG, GPT fine-tuning, multimodal AI, multimodal data engineering, and secure AI.  
 📚 **Recent Projects**:  
 - Developing **10-CNN** based Speech Emotion Recognition (SER) architecture.  
 - Developing **AR/VR technologies** for Unity 3D game.  
-- Developing **GraphRAG** application for query-based research-article recommendation using PUBMED & EuropePMC API.  
+- Developed **GraphRAG** application for query-based research-article recommendation using PUBMED & EuropePMC API.  
 
 ---
 
