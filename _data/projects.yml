@@ -18,6 +18,7 @@
   demo: https://github.com/hyeblee/weather_nuri/tree/data
   tags:
     - tag: Python
+    - tag: LangChain
     - tag: Spring
     - tag: Flutter
     - tag: Kotlin
@@ -37,3 +38,13 @@
   tags:
     - tag: Python
     - tag: TensorFlow
+
+- name: GraphRAG based Research-Article Recommendation
+  descr: "Designed and implemented a framework to automate the retrieval, parsing, and storage of research articles based on user-defined search queries or keywords. Leveraged PUBMED and EuropePMC APIs to download PDF and XML papers, parsed them, and saved the results as Parquet files in Azure Blob Storage. Integrated this data with a GraphRAG system, enabling the retrieval of the most relevant answers based on user input. The GraphRAG system was built using the LangChain framework and Neo4j database, with Cypher queries for efficient graph traversal."
+  demo: https://github.com/yoooousir/GraphRAG-based-Research-Paper-Recommendation
+  tags:
+    - tag: Python
+    - tag: LangChain
+    - tag: Azure
+    - tag: Cypher
+    - tag: Neo4j
