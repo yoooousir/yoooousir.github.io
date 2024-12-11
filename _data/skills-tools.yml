@@ -37,3 +37,6 @@
 
 - name: Jekyll
   weight: 5
+
+- name: Neo4j
+  weight: 2
