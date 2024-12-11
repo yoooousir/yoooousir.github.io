@@ -35,7 +35,7 @@ show_aboutme_card: true
 # about_me_title: The will be displayed as the title in the About Me section
 about_me_title: About Me
 # about_me_description: This will be displayed under the title.
-about_me_description: I'm Chaeyoung Kim. I'm interested in NLP(Natural Language Processing), Multimodal AI and ML/DL. Checkout the source code and the documentation at <a class="highlight-link" href="https://github.com/yoooousir" target="_blank" rel="noreferrer"> Github </a> and <a class="highlight-link" href="https://drive.google.com/drive/folders/1VPGAOxke8JQfgPH5dH82NMTCemlnJRZ2?usp=sharing" target="_blank" rel="noreferrer"> here </a>.
+about_me_description: I'm Chaeyoung Kim. My expertise and research primarily focus on Natural Language Processing (NLP), Large Language Models (LLMs), and Multimodal AI. Most of my projects and experiences involve machine learning (ML) and deep learning (DL), particularly in building and evaluating models. I am also skilled in pipeline management, including data crawling, preprocessing, feature engineering, and model development, as well as data analysis using SQL. Checkout the source code and the documentation at <a class="highlight-link" href="https://github.com/yoooousir" target="_blank" rel="noreferrer"> Github </a> and <a class="highlight-link" href="https://drive.google.com/drive/folders/1VPGAOxke8JQfgPH5dH82NMTCemlnJRZ2?usp=sharing" target="_blank" rel="noreferrer"> here </a>.
 
 # SKILLS SECTION
 # show_skills_card:
