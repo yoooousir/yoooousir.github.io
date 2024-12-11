@@ -14,7 +14,7 @@
 #     - tag: Node
 
 - name: BITTOK
-  descr: "It is a Weather Chatbot that can recommand what to wear and eat based on the user's current place and weather. It was developed based on RAG structure, using GPT-4o api key and customized database I built by python crawling and NLP-preprocessed, connected to GCP database."
+  descr: "A weather chatbot that recommends appropriate clothing and food based on the user's current location and weather conditions. It was developed using a Retrieval-Augmented Generation (RAG) structure, leveraging the GPT-4 API key and a custom database built through Python-based web crawling and NLP preprocessing, hosted on a GCP database."
   demo: https://github.com/hyeblee/weather_nuri/tree/data
   tags:
     - tag: Python
@@ -23,9 +23,17 @@
     - tag: Kotlin
     - tag: Postman
 
-- name: Graphically Summarization the Research Article
-  descr: "This module can show the mindmap graphically of the PDF article that user uploaded, so that can recognize the summarization of it in a glance."
-  demo: https://github.com/yoooousir/OSSW24_Team6_Assignment2
+- name: Document and Website Development
+  descr: "Designed and developed a website hosted via GitHub Pages using the Jekyll framework. Additionally, created comprehensive documentation implemented with the Python-Sphinx framework, hosted on ReadTheDocs to enhance user understanding of the project structure."
+  demo: https://github.com/yoooousir/OSSW24_Team6
+  tags:
+    - tag: Ruby
+    - tag: Git
+    - tag: Python
+
+- name: 10-CNN based Speech Emotion Recognition (SER)
+  descr: "Developed and trained a 10-layer convolutional neural network (CNN) for speech emotion recognition (SER) using datasets such as RAVDESS, CREMA-D, TESS, and SAVEE. The model processes audio features extracted from speech data and achieves approximately 95% accuracy in classifying emotions."
+  demo: https://github.com/yoooousir/10-CNN-based-Speech-Emotion-Recognition
   tags:
     - tag: Python
-    - tag: React
+    - tag: TensorFlow
