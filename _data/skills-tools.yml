@@ -26,8 +26,14 @@
 - name: PostgreSQL
   weight: 4
 
+- name: DBeaver
+  weight: 5
+
+- name: Docker
+  weight: 4
+
 - name: Git
   weight: 4
 
-- name: Chrome DevTools
-  weight: 2
+- name: Jekyll
+  weight: 5
