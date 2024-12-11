@@ -12,7 +12,7 @@ This blog, PinkMonster, is a space where I document curriculum vitae and share m
 📚 **Recent Projects**:  
 - Developing **10-CNN** based Speech Emotion Recognition (SER) architecture.  
 - Developing **AR/VR technologies** for Unity 3D game.  
-- Developed **GraphRAG** application for query-based research-article recommendation using PUBMED & EuropePMC API.  
+- Developed **GraphRAG** framework for query-based research-article recommendation using PUBMED & EuropePMC API.  
 
 ---
 
