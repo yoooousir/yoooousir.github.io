@@ -49,7 +49,7 @@
     - tag: Neo4j
 
 - name: "Cheat'em in Texas"
-  descr: "Developed the UI/UX and implemented C# scripts for an Oculus-based VR game using Unity, featuring a poker-themed cheating scenario where players aim to achieve a target amount in a Texas Hold'em casino setting. Designed intuitive interfaces and interactions for players to seamlessly act as both the dealer and player, using commands for sleight-of-hand tricks. Contributed to gameplay mechanics and integrated dynamic AI opponents using Barracuda and ONNX, delivering an immersive and engaging user experience."
+  descr: "Designed and implemented the UI/UX and customized C# scripts for an Oculus-based VR game using Unity, featuring a poker-themed cheating scenario where players aim to achieve a target amount in a Texas Hold'em casino setting. Configured the XR Interaction Toolkit and Meta XR SDK to create intuitive interfaces and interactions, enabling players to seamlessly act as both the dealer and player while executing sleight-of-hand tricks. Contributed to gameplay mechanics and integrated dynamic AI opponents using Barracuda and ONNX, delivering an immersive and engaging user experience."
   demo: https://github.com/OruteZ/OculusTeamProject
   tags:
     - tag: C#
