@@ -26,6 +26,15 @@
     - tag: Azure
   timeline-side: right
 
+- title: AI Science Lab
+  title-url: https://sites.google.com/view/wschoi-sejong
+  date: 2023 - 2024
+  subtitle: Undergraduate Researcher
+  tags:
+    - tag: Python
+    - tag: R
+  timeline-side: right
+
 - title: Sejong University
   title-url: http://www.sejong.ac.kr/
   date: 2018 - 2024
