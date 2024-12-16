@@ -17,7 +17,7 @@ username: Chaeyoung Kim
 # > set this to your job title, e.g. Fullstack Developer
 typing_text: Welcome to PinkMonster!
 # email: Your E-Mail address for the email button.
-email: kcy537199@sju.ac.kr
+email: kcy537199@naver.com
 # For every social button you want to display, set your username or userid
 # If you do not use one of the following websites, then leave it empty
 # > twitter_username:
@@ -54,7 +54,7 @@ show_timeline_card: true
 timeline_title: Education & Experience
 # cv_download_link: The link where you host your cv.
 # > e.g. you share your cv on your dropbox, then add the dropbox link here
-cv_download_link: https://example.com/
+cv_download_link: https://drive.google.com/drive/folders/1eBmLRbAB-OZATzctNdHvufKk4rCub85t?usp=sharing
 
 # PROJECTS SECTION
 # show_projects_card:
