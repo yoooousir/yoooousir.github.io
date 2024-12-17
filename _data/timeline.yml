@@ -17,14 +17,14 @@
 #     - tag: Rails
 #   timeline-side: right
 
-- title: BRFrame
-  title-url: http://brframe.com/
-  date: 2024 - 2024
-  subtitle: AI Researcher
-  tags:
-    - tag: Python
-    - tag: Azure
-  timeline-side: right
+#- title: BRFrame
+ # title-url: http://brframe.com/
+  #date: 2024 - 2024
+  #subtitle: AI Researcher
+  #tags:
+   # - tag: Python
+    #- tag: Azure
+  #timeline-side: right
 
 - title: AI Science Lab
   title-url: https://sites.google.com/view/wschoi-sejong
