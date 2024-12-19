@@ -63,4 +63,5 @@
   tags:
     - tag: Python
     - tag: OpenSearch
+    - tag: Docker
     - tag: Postman
