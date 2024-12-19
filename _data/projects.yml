@@ -56,3 +56,11 @@
     - tag: Barracuda
     - tag: ONNX
     - tag: Unity
+
+- name: "OpenSearch Project"
+  descr: "A project to index game item data using OpenSearch and Sentence Transformers, and build a REST API that provides keyword search and vector-based recommendation functions."
+  demo: https://github.com/yoooousir/OpenSearchProject
+  tags:
+    - tag: Python
+    - tag: OpenSearch
+    - tag: Postman
