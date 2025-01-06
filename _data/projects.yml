@@ -65,3 +65,10 @@
     - tag: OpenSearch
     - tag: Docker
     - tag: Postman
+
+- name: "NPU Profiler Project"
+  descr: "A project to implement a simple profiler for measuring and analyzing the performance of deep learning model (CNN) on NPU."
+  demo: https://github.com/yoooousir/npu_profiler_project
+  tags:
+    - tag: Python
+    - tag: Pytorch
