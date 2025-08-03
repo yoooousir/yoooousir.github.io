@@ -13,21 +13,28 @@
 #     - tag: AngularJS
 #     - tag: Node
 
+- name: SQLFeatureGen
+  descr: "A feature engineering project built on structured log data, using advanced SQL queries combined with Python-based transformation. The project demonstrates how to derive session-based behavioral features, detect anomalous traffic using pattern matching and aggregations, and prepare model-ready features using pandas. Also includes exploratory data analysis notebooks to extract meaningful insights from raw logs."
+  demo: https://github.com/yoooousir/SQLFeatureGen
+  tags:
+    - Python
+    - SQL
+
 - name: GridTune-Parallel
   descr: "A multithreaded hyperparameter tuning system that leverages C's pthread library to parallelize grid search over different hyperparameter combinations. Each thread executes a Python subprocess to train a dummy classification model with specific parameters. All experiment results are tracked and visualized using MLflow, enabling systematic selection of the best-performing configuration."
   demo: https://github.com/yoooousir/gridtune-parallel
   tags:
-    - C
     - Python
+    - C
     - MLflow
 
 - name: PacketNet-Detector
   descr: "A lightweight intrusion detection system prototype that parses raw network packet logs using a C-based parser and applies a TensorFlow CNN model for attack classification. It simulates a real-world packet analysis pipeline by extracting IP, port, protocol, and flag features via bitwise operations and struct parsing, then feeding them into a deep learning model for binary classification of malicious behavior."
   demo: https://github.com/yoooousir/packetnet-detector
   tags:
-    - C
-    - TensorFlow
     - Python
+    - TensorFlow
+    - C
 
 - name: BITTOK
   descr: "A weather chatbot that recommends appropriate clothing and food based on the user's current location and weather conditions. It was developed using a Retrieval-Augmented Generation (RAG) structure, leveraging the GPT-4 API key and a custom database built through Python-based web crawling and NLP preprocessing, hosted on a GCP database."
