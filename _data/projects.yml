@@ -17,28 +17,28 @@
   descr: "A lightweight intrusion detection system prototype that parses raw network packet logs using a C-based parser and applies a TensorFlow CNN model for attack classification. It simulates a real-world packet analysis pipeline by extracting IP, port, protocol, and flag features via bitwise operations and struct parsing, then feeding them into a deep learning model for binary classification of malicious behavior."
   demo: https://github.com/yoooousir/packetnet-detector
   tags:
-    - tag: C
-    - tag: TensorFlow
-    - tag: Python
+    - C
+    - TensorFlow
+    - Python
 
 - name: BITTOK
   descr: "A weather chatbot that recommends appropriate clothing and food based on the user's current location and weather conditions. It was developed using a Retrieval-Augmented Generation (RAG) structure, leveraging the GPT-4 API key and a custom database built through Python-based web crawling and NLP preprocessing, hosted on a GCP database."
   demo: https://github.com/hyeblee/weather_nuri/tree/data
   tags:
-    - tag: Python
-    - tag: LangChain
-    - tag: Spring
-    - tag: Flutter
-    - tag: Kotlin
-    - tag: Postman
+    - Python
+    - LangChain
+    - Spring
+    - Flutter
+    - Kotlin
+    - Postman
 
 - name: Document and Website Development
   descr: "Designed and developed a website hosted via GitHub Pages using the Jekyll framework. Additionally, created comprehensive documentation implemented with the Python-Sphinx framework, hosted on ReadTheDocs to enhance user understanding of the project structure."
   demo: https://github.com/yoooousir/OSSW24_Team6
   tags:
-    - tag: Ruby
-    - tag: Git
-    - tag: Python
+    - Ruby
+    - Git
+    - Python
 
 #- name: 10-CNN based Speech Emotion Recognition (SER)
  # descr: "Developed and trained a 10-layer convolutional neural network (CNN) for speech emotion recognition (SER) using datasets such as RAVDESS, CREMA-D, TESS, and SAVEE. The model processes audio features extracted from speech data and achieves approximately 95% accuracy in classifying emotions."
@@ -51,32 +51,32 @@
   descr: "Designed and implemented a framework to automate the retrieval, parsing, and storage of research articles based on user-defined search queries or keywords. Leveraged PUBMED and EuropePMC APIs to download PDF and XML papers, parsed them, and saved the results as Parquet files in Azure Blob Storage. Integrated this data with a GraphRAG system, enabling the retrieval of the most relevant answers based on user input. The GraphRAG system was built using the LangChain framework and Neo4j database, with Cypher queries for efficient graph traversal."
   demo: https://github.com/yoooousir/GraphRAG_Framework
   tags:
-    - tag: Python
-    - tag: LangChain
-    - tag: Azure
-    - tag: Neo4j
+    - Python
+    - LangChain
+    - Azure
+    - Neo4j
 
 - name: "Cheat'em in Texas"
   descr: "Designed and implemented the UI/UX and customized C# scripts for an Oculus-based VR game using Unity, featuring a poker-themed cheating scenario where players aim to achieve a target amount in a Texas Hold'em casino setting. Configured the XR Interaction Toolkit and Meta XR SDK to create intuitive interfaces and interactions, enabling players to seamlessly act as both the dealer and player while executing sleight-of-hand tricks. Contributed to gameplay mechanics and integrated dynamic AI opponents using Barracuda and ONNX, delivering an immersive and engaging user experience."
   demo: https://github.com/OruteZ/OculusTeamProject
   tags:
-    - tag: C#
-    - tag: Barracuda
-    - tag: ONNX
-    - tag: Unity
+    - C#
+    - Barracuda
+    - ONNX
+    - Unity
 
 - name: "OpenSearch Project"
   descr: "A project to index game item data using OpenSearch and Sentence Transformers, and build a REST API that provides keyword search and vector-based recommendation functions."
   demo: https://github.com/yoooousir/OpenSearchProject
   tags:
-    - tag: Python
-    - tag: OpenSearch
-    - tag: Docker
-    - tag: Postman
+    - Python
+    - OpenSearch
+    - Docker
+    - Postman
 
 - name: "NPU Profiler Project"
   descr: "A project to implement a simple profiler for measuring and analyzing the performance of deep learning model (CNN) on NPU."
   demo: https://github.com/yoooousir/npu_profiler_project
   tags:
-    - tag: Python
-    - tag: Pytorch
+    - Python
+    - Pytorch
