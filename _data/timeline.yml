@@ -31,20 +31,20 @@
   date: 2025 - Current
   subtitle: AI Researcher
   tags:
-    - tag: Python
-    - tag: Linux
-    - tag: SQL
-    - tag: Docker
-    - tag: Airflow
-   timeline-side: right
+    - Python
+    - Linux
+    - SQL
+    - Docker
+    - Airflow
+  timeline-side: right
 
 - title: AI Science Lab
   title-url: https://sites.google.com/view/wschoi-sejong
   date: 2023 - 2024
   subtitle: Undergraduate Researcher
   tags:
-    - tag: Python
-    - tag: R
+    - Python
+    - R
   timeline-side: right
 
 - title: Sejong University
