@@ -15,12 +15,11 @@
 
 - name: PacketNet-Detector
   descr: "A lightweight intrusion detection system prototype that parses raw network packet logs using a C-based parser and applies a TensorFlow CNN model for attack classification. It simulates a real-world packet analysis pipeline by extracting IP, port, protocol, and flag features via bitwise operations and struct parsing, then feeding them into a deep learning model for binary classification of malicious behavior."
-  demo: demo: https://github.com/yoooousir/packetnet-detector
+  demo: https://github.com/yoooousir/packetnet-detector
   tags:
     - tag: C
     - tag: TensorFlow
     - tag: Python
-
 
 - name: BITTOK
   descr: "A weather chatbot that recommends appropriate clothing and food based on the user's current location and weather conditions. It was developed using a Retrieval-Augmented Generation (RAG) structure, leveraging the GPT-4 API key and a custom database built through Python-based web crawling and NLP preprocessing, hosted on a GCP database."
