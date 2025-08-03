@@ -26,6 +26,18 @@
     #- tag: Azure
   #timeline-side: right
 
+- title: CTILab
+  title-url: https://ctilab.ai/
+  date: 2025 - Current
+  subtitle: AI Researcher
+  tags:
+    - tag: Python
+    - tag: Linux
+    - tag: SQL
+    - tag: Docker
+    - tag: Airflow
+   timeline-side: right
+
 - title: AI Science Lab
   title-url: https://sites.google.com/view/wschoi-sejong
   date: 2023 - 2024
