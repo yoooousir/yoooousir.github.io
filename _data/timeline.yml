@@ -36,6 +36,7 @@
     - SQL
     - Docker
     - Airflow
+    - C
   timeline-side: right
 
 - title: AI Science Lab
