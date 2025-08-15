@@ -6,7 +6,7 @@
 #   weight: 5
 
 - name: VR
-  weight: 3
+  weight: 2
 
 - name: AR
   weight: 2
@@ -30,12 +30,6 @@
   weight: 5
 
 - name: Docker
-  weight: 4
-
-- name: Git
-  weight: 4
-
-- name: Jekyll
   weight: 5
 
 - name: Neo4j
