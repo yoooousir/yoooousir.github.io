@@ -20,5 +20,5 @@
 - name: LangChain
   weight: 5
 
-- name: Apache Airflow
+- name: Airflow
   weight: 5
