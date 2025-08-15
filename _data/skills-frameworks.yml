@@ -9,7 +9,7 @@
   weight: 5
 
 - name: Flutter
-  weight: 3
+  weight: 2
 
 - name: TensorFlow
   weight: 4
@@ -21,7 +21,4 @@
   weight: 5
 
 - name: Apache Airflow
-  weight: 1
-
-- name: Spark
-  weight: 1
+  weight: 5
