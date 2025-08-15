@@ -12,22 +12,22 @@
   weight: 5
 
 - name: C#
-  weight: 3
-
-- name: Ruby
   weight: 2
 
 - name: JavaScript
   weight: 1
 
 - name: Java
-  weight: 3
+  weight: 2
 
 - name: Kotlin
   weight: 3
 
 - name: C++
-  weight: 3
+  weight: 2
   
 - name: R
   weight: 5
+
+- name: Go
+  weight: 1
