@@ -403,6 +403,10 @@ a {
     color: #fecea8;
   }
 
+  div[skill-type="database"] {
+    color: #99b898;
+  }
+
   div[skill-weight="1"] {
     font-size: 0.75rem;
     line-height: 0.25rem;
@@ -711,7 +715,7 @@ a {
       margin: 0 0.5rem 1rem;
       padding: 0.5rem 0.25rem;
       text-align: center;
-      width: 21%;
+      width: 16%;
 
       &:hover {
         letter-spacing: 0.25rem;
@@ -733,17 +737,26 @@ a {
     }
 
     input[id="language"]:checked ~ div[skill-type="framework"],
-    input[id="language"]:checked ~ div[skill-type="tool"] {
+    input[id="language"]:checked ~ div[skill-type="tool"],
+    input[id="language"]:checked ~ div[skill-type="database"] {
       @include filter-out;
     }
 
     input[id="framework"]:checked ~ div[skill-type="language"],
-    input[id="framework"]:checked ~ div[skill-type="tool"] {
+    input[id="framework"]:checked ~ div[skill-type="tool"],
+    input[id="framework"]:checked ~ div[skill-type="database"] {
       @include filter-out;
     }
 
     input[id="tool"]:checked ~ div[skill-type="language"],
-    input[id="tool"]:checked ~ div[skill-type="framework"] {
+    input[id="tool"]:checked ~ div[skill-type="framework"],
+    input[id="tool"]:checked ~ div[skill-type="database"] {
+      @include filter-out;
+    }
+
+    input[id="database"]:checked ~ div[skill-type="language"],
+    input[id="database"]:checked ~ div[skill-type="framework"],
+    input[id="database"]:checked ~ div[skill-type="tool"] {
       @include filter-out;
     }
   }
@@ -843,7 +856,7 @@ a {
   }
 
   #skills .filter-button {
-    width: 21.5%;
+    width: 17;
   }
 
   .timeline-wrapper {
@@ -873,7 +886,7 @@ a {
   }
 
   #skills .filter-button {
-    width: 22%;
+    width: 17.5;
   }
 
   .timeline-wrapper {
