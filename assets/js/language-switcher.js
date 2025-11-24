@@ -3,7 +3,7 @@ const translations = {
   en: {
     'landing.greeting': "Hi, I'm",
     'landing.name': 'Chaeyoung Kim',
-    'landing.suffix': ','
+    'landing.suffix': ',',
     'aboutme.title': 'About Me',
     'aboutme.description': "I'm Chaeyoung Kim, a data engineer passionate about building scalable data pipelines and ML infrastructure. With experience in real-time data processing using Kafka, ClickHouse, and Airflow, I specialize in developing ETL workflows.",
     'skills.title': 'Skills',
