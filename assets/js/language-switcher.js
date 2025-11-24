@@ -22,15 +22,15 @@ const translations = {
     'landing.greeting': '안녕하세요,',
     'landing.name': '김채영',
     'landing.suffix': '입니다.',
-    'aboutme.title': '소개',
+    'aboutme.title': 'About Me',
     'aboutme.description': '확장 가능한 데이터 파이프라인과 ML 인프라 구축에 열정을 가진 데이터 엔지니어 김채영입니다. Kafka, ClickHouse, Airflow를 활용한 실시간 데이터 처리 경험을 바탕으로 ETL 워크플로우 개발을 전문으로 합니다.',
-    'skills.title': '기술 스택',
-    'projects.title': '프로젝트',
+    'skills.title': 'Skills',
+    'projects.title': 'Projects',
     'projects.view_code': '코드 보기',
-    'timeline.title': '타임라인',
+    'timeline.title': 'Timeline',
     'timeline.cv_text': '자세한 정보는',
     'timeline.cv_link': '이력서',
-    'contact.title': '연락처',
+    'contact.title': 'Contact',
     'contact.description': '언제든지 편하게 연락 주세요!',
     'footer.built_with': 'Built with',
     'footer.and': 'and',
@@ -261,6 +261,9 @@ function setLanguage(lang) {
   setTimeout(() => {
     const rotateElement = document.getElementById('txt-rotate');
     if (rotateElement) {
+      // 텍스트 비우기
+      rotateElement.innerHTML = '';
+      
       const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
       // LanguageTxtRotate 사용
       currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[lang], period);
@@ -379,6 +382,9 @@ window.addEventListener('load', function() {
   // 타이핑 효과 시작
   const rotateElement = document.getElementById('txt-rotate');
   if (rotateElement) {
+    // 타이핑 시작 전에 텍스트를 완전히 비우기
+    rotateElement.innerHTML = '';
+    
     const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
     currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[currentLang], period);
   }
