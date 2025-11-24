@@ -1,5 +1,4 @@
-<h1 class="title">{{site.skills_title}}</h1>
-
+<h1 class="title" data-i18n="skills.title">{{site.skills_title}}</h1>
 <div id="skills">
   <input type="radio" id="all" name="filter" checked />
   <label class="filter-button neumorphism-button" for="all">All</label>
@@ -9,7 +8,6 @@
   <label class="filter-button neumorphism-button" for="framework">Frameworks</label>
   <input type="radio" id="tool" name="filter" />
   <label class="filter-button neumorphism-button" for="tool">Tools</label>
-
   {% for language in site.data.skills-languages %}
     <div skill-type="language" skill-weight="{{language.weight}}" data-aos="zoom-in">
       {{language.name}}
