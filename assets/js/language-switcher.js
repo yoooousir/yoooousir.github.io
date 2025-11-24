@@ -337,10 +337,11 @@ function setLanguage(lang) {
 //   });
 // });
 // 페이지 로드 시 실행
-window.addEventListener('load', function() {
+window.addEventListener('DOMContentLoaded', function() {
   console.log('Language switcher loaded');
   
   const currentLang = getCurrentLanguage();
+  console.log('Initial language:', currentLang);
 
   // 1. 먼저 초기 언어로 모든 텍스트 번역
   document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -350,15 +351,39 @@ window.addEventListener('load', function() {
     }
   });
 
-  // 2. 타이핑 효과 시작
+  // 2. 버튼 활성화 상태 설정 (타이핑 효과보다 먼저)
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.getAttribute('data-lang') === currentLang) {
+      btn.classList.add('active');
+    }
+  });
+  
+  // 3. 언어 버튼 클릭 이벤트 등록
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const lang = this.getAttribute('data-lang');
+      console.log('Button clicked, switching to:', lang);
+      setLanguage(lang);
+    });
+  });
+});
+
+// 타이핑 효과는 페이지가 완전히 로드된 후 시작
+window.addEventListener('load', function() {
+  console.log('Page fully loaded, starting typing effect');
+  
+  const currentLang = getCurrentLanguage();
+  
+  // 타이핑 효과 시작
   const rotateElement = document.getElementById('txt-rotate');
   if (rotateElement) {
     const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
-    // LanguageTxtRotate 사용
     currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[currentLang], period);
   }
   
-  // 3. 프로젝트 설명 초기 번역
+  // 프로젝트 설명 초기 번역
   document.querySelectorAll('.project').forEach(projectCard => {
     const projectName = projectCard.querySelector('h3');
     const projectDesc = projectCard.querySelector('.project-desc');
@@ -371,7 +396,7 @@ window.addEventListener('load', function() {
     }
   });
   
-  // 4. Timeline 초기 번역
+  // Timeline 초기 번역
   document.querySelectorAll('.timeline li').forEach(item => {
     const titleElement = item.querySelector('.flag a span');
     const descElement = item.querySelector('.desc');
@@ -389,21 +414,5 @@ window.addEventListener('load', function() {
     }
   });
   
-  // 5. 버튼 활성화 상태 설정
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.remove('active');
-    if (btn.getAttribute('data-lang') === currentLang) {
-      btn.classList.add('active');
-    }
-  });
-  
-  // 6. 언어 버튼 클릭 이벤트
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const lang = this.getAttribute('data-lang');
-      console.log('Button clicked, switching to:', lang);
-      setLanguage(lang);
-    });
-  });
+  console.log('Language switcher fully loaded');
 });
