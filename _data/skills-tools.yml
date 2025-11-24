@@ -8,14 +8,14 @@
 - name: Postman
   weight: 2
 
-- name: PostgreSQL
-  weight: 4
+# - name: PostgreSQL
+#   weight: 4
 
 - name: DBeaver
   weight: 4
 
-- name: ClickHouse
-  weight: 5
+# - name: ClickHouse
+#   weight: 5
 
 - name: Docker
   weight: 5
@@ -23,11 +23,11 @@
 - name: OpenSearch
   weight: 4
 
-- name: Neo4j
-  weight: 2
+# - name: Neo4j
+#   weight: 2
 
-- name: MongoDB
-  weight: 3
+# - name: MongoDB
+#   weight: 3
 
 - name: JupyterLab
   weight: 4
