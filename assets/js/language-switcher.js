@@ -2,6 +2,7 @@
 const translations = {
   en: {
     'landing.greeting': "Hi, I'm",
+    'landing.name': 'Chaeyoung Kim",
     'aboutme.title': 'About Me',
     'aboutme.description': "I'm Chaeyoung Kim, a data engineer passionate about building scalable data pipelines and ML infrastructure. With experience in real-time data processing using Kafka, ClickHouse, and Airflow, I specialize in developing ETL workflows.",
     'skills.title': 'Skills',
@@ -17,6 +18,7 @@ const translations = {
   },
   ko: {
     'landing.greeting': '안녕하세요, 저는',
+    'landing.name': '김채영',
     'aboutme.title': '소개',
     'aboutme.description': '확장 가능한 데이터 파이프라인과 ML 인프라 구축에 열정을 가진 데이터 엔지니어 김채영입니다. Kafka, ClickHouse, Airflow를 활용한 실시간 데이터 처리 경험을 바탕으로 ETL 워크플로우 개발을 전문으로 합니다.',
     'skills.title': '기술 스택',
@@ -79,7 +81,7 @@ const timelineTranslations = {
   },
   ko: {
     'CTILab': 'AI 연구원',
-    'AI Science Lab': '학부 연구생생',
+    'AI Science Lab': '학부 연구생',
     'Sejong University': '데이터사이언스 학사'
   }
 };
@@ -168,7 +170,7 @@ function setLanguage(lang) {
       // 새로운 TxtRotate 인스턴스 생성 및 저장
       currentTypingInstance = new TxtRotate(rotateElement, typingTexts[lang], period);
     }
-  }, 100);
+  }, 1);
   
   // 4. 프로젝트 설명 번역
   document.querySelectorAll('.project').forEach(projectCard => {
