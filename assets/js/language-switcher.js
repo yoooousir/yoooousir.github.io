@@ -224,11 +224,12 @@ window.addEventListener('load', function() {
   const currentLang = getCurrentLanguage();
   
   // 초기 언어 설정 (페이지 로드 후 타이핑 효과가 시작된 후에 실행)
-  setTimeout(() => {
-    if (currentLang === 'ko') {
-      setLanguage('ko');
-    }
-  }, 1000);
+  const rotateElement = document.getElementById('txt-rotate');
+  if (rotateElement) {
+    const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
+    // 현재 언어에 맞는 텍스트로 시작
+    currentTypingInstance = new TxtRotate(rotateElement, typingTexts[currentLang], period);
+  }
   
   // 언어 버튼 클릭 이벤트
   document.querySelectorAll('.lang-btn').forEach(btn => {
