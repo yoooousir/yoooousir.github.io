@@ -754,12 +754,9 @@ a {
       @include filter-out;
     }
 
-    // input[id="database"]:checked ~ div[skill-type="language"],
-    // input[id="database"]:checked ~ div[skill-type="framework"],
-    // input[id="database"]:checked ~ div[skill-type="tool"] {
-    //   @include filter-out;
-    // }
-    input[id="database"]:checked div[skill-type="database"] {
+    input[id="database"]:checked ~ div[skill-type="language"],
+    input[id="database"]:checked ~ div[skill-type="framework"],
+    input[id="database"]:checked ~ div[skill-type="tool"] {
       @include filter-out;
     }
   }
