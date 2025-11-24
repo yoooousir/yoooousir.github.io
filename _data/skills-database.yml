@@ -1,0 +1,14 @@
+- name: MongoDB
+  weight: 2
+
+- name: ChromaDB
+  weight: 2
+
+- name: ClickHouse
+  weight: 5
+
+- name: PostgreSQL
+  weight: 4
+
+- name: Neo4j
+  weight: 3
