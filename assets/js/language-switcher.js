@@ -32,9 +32,9 @@ const translations = {
     'timeline.cv_link': '이력서',
     'contact.title': '연락처',
     'contact.description': '언제든지 편하게 연락 주세요!',
-    'footer.built_with': '제작:',
-    'footer.and': '및',
-    'footer.powered_by': '호스팅:'
+    'footer.built_with': 'Built with',
+    'footer.and': 'and',
+    'footer.powered_by': 'powered by'
   }
 };
 
@@ -101,7 +101,22 @@ function getCurrentLanguage() {
 }
 
 // TxtRotate 클래스 수정 - 중지 기능 추가
-var TxtRotate = function(el, toRotate, period) {
+// var TxtRotate = function(el, toRotate, period) {
+//   this.toRotate = toRotate;
+//   this.el = el;
+//   this.loopNum = 0;
+//   this.period = parseInt(period, 10) || 2000;
+//   this.txt = '';
+//   this.isDeleting = false;
+//   this.timeoutId = null;
+//   this.tick();
+// };
+var LanguageTxtRotate = function(el, toRotate, period) {
+  if (!el || !toRotate || !Array.isArray(toRotate) || toRotate.length === 0) {
+    console.warn('LanguageTxtRotate: Invalid parameters');
+    return;
+  }
+  
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -112,7 +127,49 @@ var TxtRotate = function(el, toRotate, period) {
   this.tick();
 };
 
-TxtRotate.prototype.tick = function() {
+// TxtRotate.prototype.tick = function() {
+//   var i = this.loopNum % this.toRotate.length;
+//   var fullTxt = this.toRotate[i];
+
+//   if (this.isDeleting) {
+//     this.txt = fullTxt.substring(0, this.txt.length - 1);
+//   } else {
+//     this.txt = fullTxt.substring(0, this.txt.length + 1);
+//   }
+
+//   this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+//   var that = this;
+//   var delta = 100 - Math.random() * 50;
+
+//   if (this.isDeleting) { delta /= 2; }
+
+//   if (!this.isDeleting && this.txt === fullTxt) {
+//     delta = this.period;
+//     this.isDeleting = true;
+//   } else if (this.isDeleting && this.txt === '') {
+//     this.isDeleting = false;
+//     this.loopNum++;
+//     delta = 500;
+//   }
+
+//   this.timeoutId = setTimeout(function() {
+//     that.tick();
+//   }, delta);
+// };
+
+// TxtRotate.prototype.stop = function() {
+//   if (this.timeoutId) {
+//     clearTimeout(this.timeoutId);
+//     this.timeoutId = null;
+//   }
+// };
+
+LanguageTxtRotate.prototype.tick = function() {
+  if (!this.toRotate || !Array.isArray(this.toRotate) || this.toRotate.length === 0) {
+    return;
+  }
+  
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
@@ -143,7 +200,7 @@ TxtRotate.prototype.tick = function() {
   }, delta);
 };
 
-TxtRotate.prototype.stop = function() {
+LanguageTxtRotate.prototype.stop = function() {
   if (this.timeoutId) {
     clearTimeout(this.timeoutId);
     this.timeoutId = null;
@@ -151,6 +208,38 @@ TxtRotate.prototype.stop = function() {
 };
 
 // 언어 설정
+// function setLanguage(lang) {
+//   console.log('Setting language to:', lang);
+  
+//   // 1. 기존 타이핑 효과 중지
+//   if (currentTypingInstance) {
+//     currentTypingInstance.stop();
+//     currentTypingInstance = null;
+//   }
+  
+//   // 2. 기본 텍스트 번역
+//   document.querySelectorAll('[data-i18n]').forEach(element => {
+//     const key = element.getAttribute('data-i18n');
+//     if (translations[lang] && translations[lang][key]) {
+//       element.textContent = translations[lang][key];
+//     }
+//   });
+
+//   // 2-1. suffix 처리 추가
+//   const suffixElement = document.querySelector('[data-i18n-suffix]');
+//   if (suffixElement && translations[lang]['landing.suffix']) {
+//     suffixElement.textContent = translations[lang]['landing.suffix'];
+//   }
+  
+//   // 3. 타이핑 효과 업데이트 (약간의 지연 후)
+//   setTimeout(() => {
+//     const rotateElement = document.getElementById('txt-rotate');
+//     if (rotateElement) {
+//       const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
+//       // 새로운 TxtRotate 인스턴스 생성 및 저장
+//       currentTypingInstance = new TxtRotate(rotateElement, typingTexts[lang], period);
+//     }
+//   }, 1);
 function setLanguage(lang) {
   console.log('Setting language to:', lang);
   
@@ -167,22 +256,16 @@ function setLanguage(lang) {
       element.textContent = translations[lang][key];
     }
   });
-
-  // 2-1. suffix 처리 추가
-  const suffixElement = document.querySelector('[data-i18n-suffix]');
-  if (suffixElement && translations[lang]['landing.suffix']) {
-    suffixElement.textContent = translations[lang]['landing.suffix'];
-  }
   
-  // 3. 타이핑 효과 업데이트 (약간의 지연 후)
+  // 3. 타이핑 효과 업데이트
   setTimeout(() => {
     const rotateElement = document.getElementById('txt-rotate');
     if (rotateElement) {
       const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
-      // 새로운 TxtRotate 인스턴스 생성 및 저장
-      currentTypingInstance = new TxtRotate(rotateElement, typingTexts[lang], period);
+      // LanguageTxtRotate 사용
+      currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[lang], period);
     }
-  }, 1);
+  }, 100);
   
   // 4. 프로젝트 설명 번역
   document.querySelectorAll('.project').forEach(projectCard => {
@@ -229,21 +312,92 @@ function setLanguage(lang) {
   console.log('Language set to:', lang);
 }
 
+// // 페이지 로드 시 실행
+// window.addEventListener('load', function() {
+//   console.log('Language switcher loaded');
+  
+//   const currentLang = getCurrentLanguage();
+  
+//   // 초기 언어 설정 (페이지 로드 후 타이핑 효과가 시작된 후에 실행)
+//   const rotateElement = document.getElementById('txt-rotate');
+//   if (rotateElement) {
+//     const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
+//     // 현재 언어에 맞는 텍스트로 시작
+//     currentTypingInstance = new TxtRotate(rotateElement, typingTexts[currentLang], period);
+//   }
+  
+//   // 언어 버튼 클릭 이벤트
+//   document.querySelectorAll('.lang-btn').forEach(btn => {
+//     btn.addEventListener('click', function(e) {
+//       e.preventDefault();
+//       const lang = this.getAttribute('data-lang');
+//       console.log('Button clicked, switching to:', lang);
+//       setLanguage(lang);
+//     });
+//   });
+// });
 // 페이지 로드 시 실행
 window.addEventListener('load', function() {
   console.log('Language switcher loaded');
   
   const currentLang = getCurrentLanguage();
-  
-  // 초기 언어 설정 (페이지 로드 후 타이핑 효과가 시작된 후에 실행)
+
+  // 1. 먼저 초기 언어로 모든 텍스트 번역
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    if (translations[currentLang] && translations[currentLang][key]) {
+      element.textContent = translations[currentLang][key];
+    }
+  });
+
+  // 2. 타이핑 효과 시작
   const rotateElement = document.getElementById('txt-rotate');
   if (rotateElement) {
     const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
-    // 현재 언어에 맞는 텍스트로 시작
-    currentTypingInstance = new TxtRotate(rotateElement, typingTexts[currentLang], period);
+    // LanguageTxtRotate 사용
+    currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[currentLang], period);
   }
   
-  // 언어 버튼 클릭 이벤트
+  // 3. 프로젝트 설명 초기 번역
+  document.querySelectorAll('.project').forEach(projectCard => {
+    const projectName = projectCard.querySelector('h3');
+    const projectDesc = projectCard.querySelector('.project-desc');
+    
+    if (projectName && projectDesc) {
+      const name = projectName.textContent.trim();
+      if (projectDescriptions[currentLang] && projectDescriptions[currentLang][name]) {
+        projectDesc.textContent = projectDescriptions[currentLang][name];
+      }
+    }
+  });
+  
+  // 4. Timeline 초기 번역
+  document.querySelectorAll('.timeline li').forEach(item => {
+    const titleElement = item.querySelector('.flag a span');
+    const descElement = item.querySelector('.desc');
+    
+    if (titleElement && descElement) {
+      const title = titleElement.textContent.trim();
+      if (timelineTranslations[currentLang] && timelineTranslations[currentLang][title]) {
+        const childNodes = Array.from(descElement.childNodes);
+        const textNode = childNodes.find(node => node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== '');
+        
+        if (textNode) {
+          textNode.textContent = timelineTranslations[currentLang][title];
+        }
+      }
+    }
+  });
+  
+  // 5. 버튼 활성화 상태 설정
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.getAttribute('data-lang') === currentLang) {
+      btn.classList.add('active');
+    }
+  });
+  
+  // 6. 언어 버튼 클릭 이벤트
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
