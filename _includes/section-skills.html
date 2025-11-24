@@ -1,15 +1,13 @@
 <h1 class="title" data-i18n="skills.title">{{site.skills_title}}</h1>
 <div id="skills">
-  <input type="radio" id="all" name="filter" checked />
-  <label class="filter-button neumorphism-button" for="all">All</label>
-  <input type="radio" id="language" name="filter" />
+  <input type="radio" id="language" name="filter" checked />
   <label class="filter-button neumorphism-button" for="language">Languages</label>
   <input type="radio" id="framework" name="filter" />
   <label class="filter-button neumorphism-button" for="framework">Frameworks</label>
-  <input type="radio" id="tool" name="filter" />
-  <label class="filter-button neumorphism-button" for="tool">Tools</label>
   <input type="radio" id="database" name="filter" />
   <label class="filter-button neumorphism-button" for="database">Database</label>
+  <input type="radio" id="tool" name="filter" />
+  <label class="filter-button neumorphism-button" for="tool">Tools</label>
   
   {% for language in site.data.skills-languages %}
     <div skill-type="language" skill-weight="{{language.weight}}" data-aos="zoom-in">
@@ -21,14 +19,14 @@
       {{framework.name}}
     </div>
   {% endfor %}
-  {% for tool in site.data.skills-tools %}
-    <div skill-type="tool" skill-weight="{{tool.weight}}" data-aos="zoom-in">
-      {{tool.name}}
-    </div>
-  {% endfor %}
   {% for database in site.data.skills-database %}
     <div skill-type="database" skill-weight="{{database.weight}}" data-aos="zoom-in">
       {{database.name}}
+    </div>
+  {% endfor %}
+  {% for tool in site.data.skills-tools %}
+    <div skill-type="tool" skill-weight="{{tool.weight}}" data-aos="zoom-in">
+      {{tool.name}}
     </div>
   {% endfor %}
 </div>
