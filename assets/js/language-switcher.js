@@ -3,6 +3,7 @@ const translations = {
   en: {
     'landing.greeting': "Hi, I'm",
     'landing.name': 'Chaeyoung Kim',
+    'landing.suffix': ','
     'aboutme.title': 'About Me',
     'aboutme.description': "I'm Chaeyoung Kim, a data engineer passionate about building scalable data pipelines and ML infrastructure. With experience in real-time data processing using Kafka, ClickHouse, and Airflow, I specialize in developing ETL workflows.",
     'skills.title': 'Skills',
@@ -19,6 +20,7 @@ const translations = {
   ko: {
     'landing.greeting': '안녕하세요, 저는',
     'landing.name': '김채영',
+    'landing.name': '입니다.',
     'aboutme.title': '소개',
     'aboutme.description': '확장 가능한 데이터 파이프라인과 ML 인프라 구축에 열정을 가진 데이터 엔지니어 김채영입니다. Kafka, ClickHouse, Airflow를 활용한 실시간 데이터 처리 경험을 바탕으로 ETL 워크플로우 개발을 전문으로 합니다.',
     'skills.title': '기술 스택',
@@ -161,6 +163,12 @@ function setLanguage(lang) {
       element.textContent = translations[lang][key];
     }
   });
+
+  // 2-1. suffix 처리 추가
+  const suffixElement = document.querySelector('[data-i18n-suffix]');
+  if (suffixElement && translations[lang]['landing.suffix']) {
+    suffixElement.textContent = translations[lang]['landing.suffix'];
+  }
   
   // 3. 타이핑 효과 업데이트 (약간의 지연 후)
   setTimeout(() => {
