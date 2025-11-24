@@ -13,6 +13,9 @@
 
 - name: Java
   weight: 1
-  
+
+- name: Kotlin
+  weight: 1
+
 - name: R
   weight: 5
