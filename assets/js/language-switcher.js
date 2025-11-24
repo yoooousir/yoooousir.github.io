@@ -265,9 +265,10 @@ function setLanguage(lang) {
       // 텍스트 비우기
       rotateElement.innerHTML = '';
       
-      const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
-      // LanguageTxtRotate 사용
-      currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[lang], period);
+      setTimeout(() => {
+        const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
+        currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[currentLang], period);
+      }, 300);
     }
   }, 100);
   
@@ -386,8 +387,10 @@ window.addEventListener('load', function() {
     // 타이핑 시작 전에 텍스트를 완전히 비우기
     rotateElement.innerHTML = '';
     
-    const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
-    currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[currentLang], period);
+    setTimeout(() => {
+      const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
+      currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[lang], period);
+    }, 100);
   }
   
   // 프로젝트 설명 초기 번역
