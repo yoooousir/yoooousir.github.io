@@ -399,10 +399,6 @@ a {
     color: #ff847c;
   }
 
-  div[skill-type="database"] {
-    color: #99b898;
-  }
-
   div[skill-type="tool"] {
     color: #fecea8;
   }
@@ -737,26 +733,17 @@ a {
     }
 
     input[id="language"]:checked ~ div[skill-type="framework"],
-    input[id="language"]:checked ~ div[skill-type="tool"],
-    input[id="language"]:checked ~ div[skill-type="database"] {
+    input[id="language"]:checked ~ div[skill-type="tool"] {
       @include filter-out;
     }
 
     input[id="framework"]:checked ~ div[skill-type="language"],
-    input[id="framework"]:checked ~ div[skill-type="tool"],
-    input[id="framework"]:checked ~ div[skill-type="database"] {
+    input[id="framework"]:checked ~ div[skill-type="tool"] {
       @include filter-out;
     }
 
     input[id="tool"]:checked ~ div[skill-type="language"],
-    input[id="tool"]:checked ~ div[skill-type="framework"],
-    input[id="tool"]:checked ~ div[skill-type="database"] {
-      @include filter-out;
-    }
-
-    input[id="database"]:checked ~ div[skill-type="language"],
-    input[id="database"]:checked ~ div[skill-type="framework"],
-    input[id="database"]:checked ~ div[skill-type="tool"] {
+    input[id="tool"]:checked ~ div[skill-type="framework"] {
       @include filter-out;
     }
   }
