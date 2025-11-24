@@ -1,9 +1,10 @@
 // 번역 데이터
 const translations = {
   en: {
-    'landing.greeting': 'Hi, I\'m',
+    'landing.greeting': "Hi, I'm",
+    'landing.name': 'Chaeyoung Kim',
     'aboutme.title': 'About Me',
-    'aboutme.description': 'I\'m Chaeyoung Kim, a data engineer passionate about building scalable data pipelines and ML infrastructure. With experience in real-time data processing using Kafka, ClickHouse, and Airflow, I specialize in developing ETL workflows.',
+    'aboutme.description': "I'm Chaeyoung Kim, a data engineer passionate about building scalable data pipelines and ML infrastructure. With experience in real-time data processing using Kafka, ClickHouse, and Airflow, I specialize in developing ETL workflows.",
     'skills.title': 'Skills',
     'projects.title': 'Projects',
     'projects.view_code': 'View Code',
@@ -17,6 +18,7 @@ const translations = {
   },
   ko: {
     'landing.greeting': '안녕하세요, 저는',
+    'landing.name': '김채영',
     'aboutme.title': '소개',
     'aboutme.description': '확장 가능한 데이터 파이프라인과 ML 인프라 구축에 열정을 가진 데이터 엔지니어 김채영입니다. Kafka, ClickHouse, Airflow를 활용한 실시간 데이터 처리 경험을 바탕으로 ETL 워크플로우 개발을 전문으로 합니다.',
     'skills.title': '기술 스택',
@@ -80,65 +82,124 @@ const timelineTranslations = {
   ko: {
     'CTILab': 'AI 연구원',
     'AI Science Lab': '학부 연구생',
-    'Sejong University': '데이터사이언스학과 학사'
+    'Sejong University': '데이터사이언스 학사'
   }
 };
+
+// 전역 변수로 타이핑 효과 인스턴스 저장
+let currentTypingInstance = null;
 
 // 현재 언어 가져오기
 function getCurrentLanguage() {
   return localStorage.getItem('language') || 'en';
 }
 
+// TxtRotate 클래스 수정 - 중지 기능 추가
+var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.isDeleting = false;
+  this.timeoutId = null;
+  this.tick();
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 100 - Math.random() * 50;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  this.timeoutId = setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+TxtRotate.prototype.stop = function() {
+  if (this.timeoutId) {
+    clearTimeout(this.timeoutId);
+    this.timeoutId = null;
+  }
+};
+
 // 언어 설정
 function setLanguage(lang) {
-  // 1. 기본 텍스트 번역
+  console.log('Setting language to:', lang);
+  
+  // 1. 기존 타이핑 효과 중지
+  if (currentTypingInstance) {
+    currentTypingInstance.stop();
+    currentTypingInstance = null;
+  }
+  
+  // 2. 기본 텍스트 번역
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.getAttribute('data-i18n');
-    if (translations[lang][key]) {
+    if (translations[lang] && translations[lang][key]) {
       element.textContent = translations[lang][key];
     }
   });
   
-  // 2. 타이핑 효과 업데이트
-  const rotateElement = document.getElementById('txt-rotate');
-  if (rotateElement) {
-    // 타이핑 효과 재시작을 위해 TxtRotate 재초기화
-    const period = parseInt(rotateElement.getAttribute('data-period'));
-    if (window.TxtRotate) {
-      // 기존 타이핑 효과 제거
-      rotateElement.textContent = '';
-      // 새로운 언어로 타이핑 효과 시작
-      new TxtRotate(rotateElement, typingTexts[lang], period);
+  // 3. 타이핑 효과 업데이트 (약간의 지연 후)
+  setTimeout(() => {
+    const rotateElement = document.getElementById('txt-rotate');
+    if (rotateElement) {
+      const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
+      // 새로운 TxtRotate 인스턴스 생성 및 저장
+      currentTypingInstance = new TxtRotate(rotateElement, typingTexts[lang], period);
     }
-  }
+  }, 1);
   
-  // 3. 프로젝트 설명 번역
-  document.querySelectorAll('.project-desc').forEach(element => {
-    const projectName = element.closest('.project').querySelector('h3').textContent;
-    if (projectDescriptions[lang][projectName]) {
-      element.textContent = projectDescriptions[lang][projectName];
-    }
-  });
-  
-  // 4. Timeline subtitle 번역
-  document.querySelectorAll('.timeline .desc').forEach(element => {
-    const titleElement = element.closest('li').querySelector('.flag a span');
-    if (titleElement) {
-      const title = titleElement.textContent;
-      if (timelineTranslations[lang][title]) {
-        // 태그는 유지하고 subtitle만 변경
-        const textNode = Array.from(element.childNodes).find(node => node.nodeType === Node.TEXT_NODE);
-        if (textNode) {
-          textNode.textContent = timelineTranslations[lang][title];
-        }
+  // 4. 프로젝트 설명 번역
+  document.querySelectorAll('.project').forEach(projectCard => {
+    const projectName = projectCard.querySelector('h3');
+    const projectDesc = projectCard.querySelector('.project-desc');
+    
+    if (projectName && projectDesc) {
+      const name = projectName.textContent.trim();
+      if (projectDescriptions[lang] && projectDescriptions[lang][name]) {
+        projectDesc.textContent = projectDescriptions[lang][name];
       }
     }
   });
   
-  // 5. View Code 버튼 번역
-  document.querySelectorAll('.highlight-link').forEach(element => {
-    if (element.textContent.trim() === 'View Code' || element.textContent.trim() === '코드 보기') {
-      element.textContent = translations[lang]['projects.view_code'];
+  // 5. Timeline subtitle 번역
+  document.querySelectorAll('.timeline li').forEach(item => {
+    const titleElement = item.querySelector('.flag a span');
+    const descElement = item.querySelector('.desc');
+    
+    if (titleElement && descElement) {
+      const title = titleElement.textContent.trim();
+      if (timelineTranslations[lang] && timelineTranslations[lang][title]) {
+        const childNodes = Array.from(descElement.childNodes);
+        const textNode = childNodes.find(node => node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== '');
+        
+        if (textNode) {
+          textNode.textContent = timelineTranslations[lang][title];
+        }
+      }
     }
   });
   
@@ -152,21 +213,29 @@ function setLanguage(lang) {
   
   // 7. localStorage에 저장
   localStorage.setItem('language', lang);
+  
+  console.log('Language set to:', lang);
 }
 
 // 페이지 로드 시 실행
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', function() {
+  console.log('Language switcher loaded');
+  
   const currentLang = getCurrentLanguage();
   
-  // 초기 로드 시 약간의 지연 후 언어 설정 (타이핑 효과 초기화 대기)
+  // 초기 언어 설정 (페이지 로드 후 타이핑 효과가 시작된 후에 실행)
   setTimeout(() => {
-    setLanguage(currentLang);
-  }, 100);
+    if (currentLang === 'ko') {
+      setLanguage('ko');
+    }
+  }, 1000);
   
   // 언어 버튼 클릭 이벤트
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const lang = btn.getAttribute('data-lang');
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const lang = this.getAttribute('data-lang');
+      console.log('Button clicked, switching to:', lang);
       setLanguage(lang);
     });
   });
