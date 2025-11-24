@@ -28,7 +28,7 @@ const translations = {
     'projects.title': 'Projects',
     'projects.view_code': '코드 보기',
     'timeline.title': 'Timeline',
-    'timeline.cv_text': '자세한 정보는',
+    'timeline.cv_text': '자세한 정보는 제',
     'timeline.cv_link': '이력서',
     'timeline.cv_suffix': '를 참고해주세요.',
     'contact.title': 'Contact',
@@ -387,7 +387,7 @@ window.addEventListener('load', function() {
     
     setTimeout(() => {
       const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
-      currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[currentlang], period);
+      currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[currentLang], period);
     }, 1000);
   }
   
