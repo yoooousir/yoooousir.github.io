@@ -5,32 +5,26 @@
 # - name: Git
 #   weight: 5
 
-- name: VR
-  weight: 2
-
-- name: AR
-  weight: 2
-
-- name: Azure
-  weight: 3
-
 - name: Postman
-  weight: 3
-
-- name: Unity
-  weight: 3
-
-- name: VSCode
-  weight: 4
+  weight: 2
 
 - name: PostgreSQL
   weight: 4
 
 - name: DBeaver
+  weight: 4
+
+- name: ClickHouse
   weight: 5
 
 - name: Docker
   weight: 5
 
+- name: OpenSearch
+  weight: 4
+
 - name: Neo4j
   weight: 2
+
+- name: MongoDB
+  weight: 3
