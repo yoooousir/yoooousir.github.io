@@ -30,6 +30,7 @@ const translations = {
     'timeline.title': 'Timeline',
     'timeline.cv_text': '자세한 정보는',
     'timeline.cv_link': '이력서',
+    'timeline.cv_suffix': '를 참고해주세요.',
     'contact.title': 'Contact',
     'contact.description': '언제든지 편하게 연락 주세요!',
     'footer.built_with': 'Built with',
