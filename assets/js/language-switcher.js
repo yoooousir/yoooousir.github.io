@@ -18,7 +18,7 @@ const translations = {
     'footer.powered_by': 'and powered by'
   },
   ko: {
-    'landing.greeting': '안녕하세요, 저는',
+    'landing.greeting': '안녕하세요,',
     'landing.name': '김채영',
     'landing.suffix': '입니다.',
     'aboutme.title': '소개',
@@ -40,11 +40,13 @@ const translations = {
 const typingTexts = {
   en: [
     "Data Engineering Enthusiast.",
-    "Scroll down for more."
+    "Welcome to my portfolio!",
+    "Scroll down for more! 👇"
   ],
   ko: [
-    "열정적인 데이터 엔지니어입니다.",
-    "아래로 스크롤 해주세요."
+    "데이터 엔지니어로 일하고 있어요.",
+    "포트폴리오에 오신 걸 환영해요!",
+    "아래로 스크롤해보세요! 👇"
   ]
 };
 
