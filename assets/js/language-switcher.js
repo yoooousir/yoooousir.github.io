@@ -259,18 +259,16 @@ function setLanguage(lang) {
   });
   
   // 3. 타이핑 효과 업데이트
-  setTimeout(() => {
-    const rotateElement = document.getElementById('txt-rotate');
-    if (rotateElement) {
-      // 텍스트 비우기
-      rotateElement.innerHTML = '';
-      
-      setTimeout(() => {
-        const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
-        currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[currentLang], period);
-      }, 1000);
-    }
-  }, 100);
+  const rotateElement = document.getElementById('txt-rotate');
+  if (rotateElement) {
+    // 텍스트 비우기
+    rotateElement.innerHTML = '';
+    
+    setTimeout(() => {
+      const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
+      currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[lang], period);
+    }, 1000);
+  }
   
   // 4. 프로젝트 설명 번역
   document.querySelectorAll('.project').forEach(projectCard => {
@@ -389,8 +387,8 @@ window.addEventListener('load', function() {
     
     setTimeout(() => {
       const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
-      currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[lang], period);
-    }, 100);
+      currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[currentlang], period);
+    }, 1000);
   }
   
   // 프로젝트 설명 초기 번역
