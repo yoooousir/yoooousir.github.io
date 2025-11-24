@@ -79,7 +79,7 @@ const timelineTranslations = {
   },
   ko: {
     'CTILab': 'AI 연구원',
-    'AI Science Lab': '학부 연구원',
+    'AI Science Lab': '학부 연구생생',
     'Sejong University': '데이터사이언스 학사'
   }
 };
