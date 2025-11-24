@@ -12,6 +12,7 @@ const translations = {
     'timeline.title': 'Timeline',
     'timeline.cv_text': 'For more information, have a look at my',
     'timeline.cv_link': 'curriculum vitae',
+    'timeline.cv_suffix': '.',
     'contact.title': 'Contact',
     'contact.description': 'Please feel free to contact me anytime!',
     'footer.built_with': 'Built with',
