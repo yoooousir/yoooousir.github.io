@@ -15,7 +15,7 @@ baseurl: "" #
 username: Chaeyoung Kim
 # typing_text: This will be typed before 'scroll down for more'.
 # > set this to your job title, e.g. Fullstack Developer
-typing_text: Welcome to PinkMonster!
+typing_text: "" # 11-24 수정
 # email: Your E-Mail address for the email button.
 email: kcy537199@naver.com
 # For every social button you want to display, set your username or userid
