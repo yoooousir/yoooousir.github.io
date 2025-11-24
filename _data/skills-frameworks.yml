@@ -15,7 +15,7 @@
   weight: 4
 
 - name: LangChain
-  weight: 5
+  weight: 4
 
 - name: Airflow
   weight: 5
