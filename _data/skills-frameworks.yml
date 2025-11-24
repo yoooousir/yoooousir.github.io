@@ -5,9 +5,6 @@
 # - name: Framework
 #   weight: 5
 
-- name: RAG
-  weight: 5
-
 - name: Flutter
   weight: 2
 
@@ -22,3 +19,6 @@
 
 - name: Airflow
   weight: 5
+
+- name: Kafka
+  weight: 4
