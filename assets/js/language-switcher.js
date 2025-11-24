@@ -13,9 +13,10 @@ const translations = {
     'timeline.cv_text': 'For more information, have a look at my',
     'timeline.cv_link': 'curriculum vitae',
     'contact.title': 'Contact',
-    'contact.description': 'Feel free to reach out!',
+    'contact.description': 'Please feel free to contact me anytime!',
     'footer.built_with': 'Built with',
-    'footer.powered_by': 'and powered by'
+    'footer.and': 'and',
+    'footer.powered_by': 'powered by'
   },
   ko: {
     'landing.greeting': '안녕하세요,',
@@ -30,9 +31,10 @@ const translations = {
     'timeline.cv_text': '자세한 정보는',
     'timeline.cv_link': '이력서',
     'contact.title': '연락처',
-    'contact.description': '언제든 연락 주세요!',
-    'footer.built_with': '제작 도구:',
-    'footer.powered_by': '및 호스팅:'
+    'contact.description': '언제든지 편하게 연락 주세요!',
+    'footer.built_with': '제작:',
+    'footer.and': '및',
+    'footer.powered_by': '호스팅:'
   }
 };
 
