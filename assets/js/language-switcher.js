@@ -268,7 +268,7 @@ function setLanguage(lang) {
       setTimeout(() => {
         const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
         currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[currentLang], period);
-      }, 300);
+      }, 1000);
     }
   }, 100);
   
@@ -389,7 +389,7 @@ window.addEventListener('load', function() {
     
     setTimeout(() => {
       const period = parseInt(rotateElement.getAttribute('data-period')) || 2000;
-      currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[lang], period);
+      currentTypingInstance = new LanguageTxtRotate(rotateElement, typingTexts[currentLang], period);
     }, 100);
   }
   
