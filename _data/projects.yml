@@ -13,29 +13,29 @@
 #     - tag: AngularJS
 #     - tag: Node
 
-- name: GridTune-Parallel
-  descr: "A multithreaded hyperparameter tuning system that leverages C's pthread library to parallelize grid search over different hyperparameter combinations. Each thread executes a Python subprocess to train a dummy classification model with specific parameters. All experiment results are tracked and visualized using MLflow, enabling systematic selection of the best-performing configuration."
-  #demo: https://github.com/yoooousir/gridtune-parallel
-  tags:
-    - Python
-    - C
-    - MLflow
+# - name: GridTune-Parallel
+#   descr: "A multithreaded hyperparameter tuning system that leverages C's pthread library to parallelize grid search over different hyperparameter combinations. Each thread executes a Python subprocess to train a dummy classification model with specific parameters. All experiment results are tracked and visualized using MLflow, enabling systematic selection of the best-performing configuration."
+#   #demo: https://github.com/yoooousir/gridtune-parallel
+#   tags:
+#     - Python
+#     - C
+#     - MLflow
 
-- name: PacketNet-Detector
-  descr: "A lightweight intrusion detection system prototype that parses raw network packet logs using a C-based parser and applies a TensorFlow CNN model for attack classification. It simulates a real-world packet analysis pipeline by extracting IP, port, protocol, and flag features via bitwise operations and struct parsing, then feeding them into a deep learning model for binary classification of malicious behavior."
-  #demo: https://github.com/yoooousir/packetnet-detector
-  tags:
-    - Python
-    - TensorFlow
-    - C
+# - name: PacketNet-Detector
+#   descr: "A lightweight intrusion detection system prototype that parses raw network packet logs using a C-based parser and applies a TensorFlow CNN model for attack classification. It simulates a real-world packet analysis pipeline by extracting IP, port, protocol, and flag features via bitwise operations and struct parsing, then feeding them into a deep learning model for binary classification of malicious behavior."
+#   #demo: https://github.com/yoooousir/packetnet-detector
+#   tags:
+#     - Python
+#     - TensorFlow
+#     - C
     
-- name: SequentialDataPipeline
-  descr: "An automated data pipeline for sequential user behavior data that integrates extraction, transformation, and loading (ETL) using Airflow."
-  #demo: https://github.com/yoooousir/SequentialDataPipeline
-  tags:
-    - Python
-    - SQL
-    - Airflow
+# - name: SequentialDataPipeline
+#   descr: "An automated data pipeline for sequential user behavior data that integrates extraction, transformation, and loading (ETL) using Airflow."
+#   #demo: https://github.com/yoooousir/SequentialDataPipeline
+#   tags:
+#     - Python
+#     - SQL
+#     - Airflow
     
 - name: BITTOK
   descr: "A weather chatbot that recommends appropriate clothing and food based on the user's current location and weather conditions. It was developed using a Retrieval-Augmented Generation (RAG) structure, leveraging the GPT-4 API key and a custom database built through Python-based web crawling and NLP preprocessing, hosted on a GCP database."
